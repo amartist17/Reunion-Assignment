@@ -134,6 +134,7 @@ exports.user = async (req, res, next) => {
       "following",
       "followers",
     ]);
+    res.type("application/json");
     return res.json({
       username: user.name,
       following: user.following.length,
